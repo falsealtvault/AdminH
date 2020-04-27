@@ -8,6 +8,7 @@ local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
 local TextBox = Instance.new("TextBox")
 local TextButton = Instance.new("TextButton")
+
 local TextButton_2 = Instance.new("TextButton")
 
 --Properties:
