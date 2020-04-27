@@ -58,7 +58,7 @@ TextButton_2.TextSize = 20.000
 
 -- Scripts:
 
-local function IWSU_fake_script() -- TextButton.Script 
+local function YBQIQPY_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	function unlockall(root)
@@ -71,4 +71,18 @@ local function IWSU_fake_script() -- TextButton.Script
 	end
 	unlockall(game.Workspace)
 end
-coroutine.wrap(IWSU_fake_script)()
+coroutine.wrap(YBQIQPY_fake_script)()
+local function PWIRCND_fake_script() -- TextButton_2.Script 
+	local script = Instance.new('Script', TextButton_2)
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-18.3, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14.3, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-10.3, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6.3, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2.3, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1.7, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5.7, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9.7, 25.3, 106.489)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(13.7, 25.3, 106.489)
+end
+coroutine.wrap(PWIRCND_fake_script)()
