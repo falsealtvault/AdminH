@@ -3,59 +3,52 @@
 
 -- Instances:
 
-local AdminHo = Instance.new("ScreenGui")
-local MainGUI = Instance.new("Frame")
-local TextButton = Instance.new("TextButton")
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
-local TextButton_2 = Instance.new("TextButton")
+local ImageButton = Instance.new("ImageButton")
 
 --Properties:
 
-AdminHo.Name = "AdminHo"
-AdminHo.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-AdminHo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-MainGUI.Name = "MainGUI"
-MainGUI.Parent = AdminHo
-MainGUI.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-MainGUI.Position = UDim2.new(0, 0, 0.60905844, 0)
-MainGUI.Size = UDim2.new(0, 273, 0, 328)
-
-TextButton.Parent = MainGUI
-TextButton.Active = false
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.051282052, 0, 0.22560975, 0)
-TextButton.Size = UDim2.new(0, 106, 0, 50)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Unlock Workspace"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-
-Frame.Parent = MainGUI
-Frame.Active = true
-Frame.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
-Frame.Position = UDim2.new(0, 0, -0.000697731972, 0)
-Frame.Size = UDim2.new(0, 273, 0, 40)
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.0572188944, 0, 0.460071504, 0)
+Frame.Size = UDim2.new(0, 285, 0, 328)
 
 TextLabel.Parent = Frame
-TextLabel.Active = true
-TextLabel.BackgroundColor3 = Color3.fromRGB(7, 7, 7)
-TextLabel.BackgroundTransparency = 0.650
-TextLabel.Size = UDim2.new(0, 273, 0, 40)
-TextLabel.Text = "Admin House GUI"
-TextLabel.TextColor3 = Color3.fromRGB(0, 85, 255)
-TextLabel.TextSize = 24.000
-TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 85, 255)
-TextLabel.TextStrokeTransparency = 0.700
-TextLabel.TextTransparency = 0.500
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.19298245, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 229, 0, 75)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "fvvsealt's GUI"
+TextLabel.TextColor3 = Color3.fromRGB(0, 151, 227)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 28.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(240, 217, 35)
+TextLabel.TextStrokeTransparency = 0.400
 TextLabel.TextWrapped = true
 
-TextButton_2.Parent = MainGUI
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.Position = UDim2.new(0.509157538, 0, 0.22560975, 0)
-TextButton_2.Size = UDim2.new(0, 107, 0, 50)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "Admin TP"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextSize = 14.000
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.0572188944, 0, 0.460030168, 0)
+ImageButton.Size = UDim2.new(0, 75, 0, 75)
+ImageButton.Image = "rbxassetid://4977093638"
+
+-- Scripts:
+
+local function NZTSAND_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local GUI = script.Parent
+	local me = GUI.ImageButton
+	
+	me.MouseButton1Up:Connect(function()
+		print("Working.")
+	end)
+end
+coroutine.wrap(NZTSAND_fake_script)()
