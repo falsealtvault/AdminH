@@ -32,7 +32,7 @@ TextLabel.Parent = ScreenGui
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.111033209, 0, 0.46882695, 0)
+TextLabel.Position = UDim2.new(0.0904078111, 0, 0.46882695, 0)
 TextLabel.Size = UDim2.new(0, 226, 0, 75)
 TextLabel.Font = Enum.Font.GothamSemibold
 TextLabel.Text = "fvvsealt's GUI"
@@ -65,7 +65,7 @@ ImageButton.Image = "rbxassetid://4977093638"
 
 -- Scripts:
 
-local function OLUNXJP_fake_script() -- TextButton.Script 
+local function HQBWEQU_fake_script() -- TextButton.Script 
 	local script = Instance.new('Script', TextButton)
 
 	function unlockall(root)
@@ -78,4 +78,4 @@ local function OLUNXJP_fake_script() -- TextButton.Script
 	end
 	unlockall(game.Workspace)
 end
-coroutine.wrap(OLUNXJP_fake_script)()
+coroutine.wrap(HQBWEQU_fake_script)()
