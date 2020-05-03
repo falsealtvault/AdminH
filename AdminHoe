@@ -5,7 +5,9 @@
 
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
 local ImageButton = Instance.new("ImageButton")
 
 --Properties:
@@ -15,14 +17,23 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
 Frame.Position = UDim2.new(0.0572188944, 0, 0.460071504, 0)
 Frame.Size = UDim2.new(0, 285, 0, 328)
 
-TextLabel.Parent = Frame
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(-0.00309556723, 0, -0.00148624182, 0)
+ImageLabel.Size = UDim2.new(0, 285, 0, 328)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=4977424915"
+
+TextLabel.Parent = ScreenGui
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.19298245, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 229, 0, 75)
+TextLabel.Position = UDim2.new(0.111033209, 0, 0.46882695, 0)
+TextLabel.Size = UDim2.new(0, 226, 0, 75)
 TextLabel.Font = Enum.Font.GothamSemibold
 TextLabel.Text = "fvvsealt's GUI"
 TextLabel.TextColor3 = Color3.fromRGB(0, 151, 227)
@@ -32,23 +43,39 @@ TextLabel.TextStrokeColor3 = Color3.fromRGB(240, 217, 35)
 TextLabel.TextStrokeTransparency = 0.400
 TextLabel.TextWrapped = true
 
+TextButton.Parent = ScreenGui
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 213, 0)
+TextButton.BorderColor3 = Color3.fromRGB(27, 42, 53)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0705256164, 0, 0.612368047, 0)
+TextButton.Size = UDim2.new(0, 90, 0, 50)
+TextButton.Style = Enum.ButtonStyle.RobloxRoundButton
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Unlock WS"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
 ImageButton.Parent = ScreenGui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
 ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.0572188944, 0, 0.460030168, 0)
+ImageButton.Position = UDim2.new(0.061210908, 0, 0.470217526, 0)
 ImageButton.Size = UDim2.new(0, 75, 0, 75)
 ImageButton.Image = "rbxassetid://4977093638"
 
 -- Scripts:
 
-local function NZTSAND_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
+local function OLUNXJP_fake_script() -- TextButton.Script 
+	local script = Instance.new('Script', TextButton)
 
-	local GUI = script.Parent
-	local me = GUI.ImageButton
-	
-	me.MouseButton1Up:Connect(function()
-		print("Working.")
-	end)
+	function unlockall(root)
+	for _,v in pairs(root:GetChildren()) do
+	if v:IsA("Part") then
+	v.Locked = false
+	end
+	unlockall(v)
+	end
+	end
+	unlockall(game.Workspace)
 end
-coroutine.wrap(NZTSAND_fake_script)()
+coroutine.wrap(OLUNXJP_fake_script)()
